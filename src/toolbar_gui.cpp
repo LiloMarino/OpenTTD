@@ -213,7 +213,7 @@ static CallBackFunction ToolbarFastForwardClick(Window *)
 {
 	if (_networking) return CBF_NONE; // no fast forward in network game
 
-	ChangeGameSpeed(_game_speed == 100);
+	ChangeGameSpeed(_game_speed == 300);
 
 	if (_settings_client.sound.click_beep) SndPlayFx(SND_15_BEEP);
 	return CBF_NONE;
@@ -2065,7 +2065,7 @@ struct MainToolbarWindow : Window {
 			this->SetWidgetDirty(WID_TN_PAUSE);
 		}
 
-		if (this->IsWidgetLowered(WID_TN_FAST_FORWARD) != (_game_speed != 100)) {
+		if (this->IsWidgetLowered(WID_TN_FAST_FORWARD) != (_game_speed != 300)) {
 			this->ToggleWidgetLoweredState(WID_TN_FAST_FORWARD);
 			this->SetWidgetDirty(WID_TN_FAST_FORWARD);
 		}
@@ -2431,7 +2431,7 @@ struct ScenarioEditorToolbarWindow : Window {
 			this->SetDirty();
 		}
 
-		if (this->IsWidgetLowered(WID_TE_FAST_FORWARD) != (_game_speed != 100)) {
+		if (this->IsWidgetLowered(WID_TE_FAST_FORWARD) != (_game_speed != 300)) {
 			this->ToggleWidgetLoweredState(WID_TE_FAST_FORWARD);
 			this->SetDirty();
 		}

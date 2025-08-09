@@ -99,7 +99,7 @@ void InitializeGame(uint size_x, uint size_y, bool reset_date, bool reset_settin
 	Map::Allocate(size_x, size_y);
 
 	_pause_mode = PM_UNPAUSED;
-	_game_speed = 100;
+	_game_speed = 300;
 	TimerGameTick::counter = 0;
 	_cur_tileloop_tile = 1;
 	_thd.redsq = INVALID_TILE;

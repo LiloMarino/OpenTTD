@@ -1850,6 +1850,6 @@ void ChangeGameSpeed(bool enable_fast_forward)
 	if (enable_fast_forward) {
 		_game_speed = _settings_client.gui.fast_forward_speed_limit;
 	} else {
-		_game_speed = 100;
+		_game_speed = 300;
 	}
 }
